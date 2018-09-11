@@ -11,10 +11,13 @@ class Stack():
     def __init__(self, stack=[]):
         self.stack = stack
 
-    def __push__(self, element):
+    def __repr__(self):
+        return 'Stack(%s)' % self.stack
+
+    def push(self, element):
         self.stack.insert(0, element)
 
-    def __pop__(self):
+    def pop(self):
         element = self.stack[0]
         del self.stack[0]
         return element
