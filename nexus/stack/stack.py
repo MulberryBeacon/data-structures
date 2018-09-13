@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 
 """
-Simple representation of a stack with push and pop operations.
+Simple implementation of a stack (LIFO).
 
 Essential operations:
 * push :: adds an element to the top of the stack
