@@ -17,25 +17,26 @@ License: MIT (see LICENSE for details)
 """
 
 class Stack():
-    def __init__(self, stack=[]):
-        self.stack = stack
+    def __init__(self):
+        self.stack = []
+        self.top = 0
 
     def __repr__(self):
         return 'Stack(%s)' % self.stack
 
     def push(self, element):
-        self.stack.insert(0, element)
+        self.stack.insert(self.top, element)
 
     def pop(self):
         if (self.empty()):
             return None
 
-        element = self.stack[0]
-        del self.stack[0]
+        element = self.stack[self.top]
+        del self.stack[self.top]
         return element
 
     def peek(self):
-        return self.stack[0]
+        return self.stack[self.top]
 
     def empty(self):
         return len(self.stack) == 0

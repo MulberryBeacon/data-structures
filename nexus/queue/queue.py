@@ -23,8 +23,9 @@ License: MIT (see LICENSE for details)
 """
 
 class Queue():
-    def __init__(self, queue=[]):
-        self.queue = queue
+    def __init__(self):
+        self.queue = []
+        self.top = 0
 
     def __repr__(self):
         return 'Queue(%s)' % self.queue
@@ -36,8 +37,8 @@ class Queue():
         if (self.empty()):
             return None
 
-        element = self.queue[0]
-        del self.queue[0]
+        element = self.queue[self.top]
+        del self.queue[self.top]
         return element
 
     def empty(self):
