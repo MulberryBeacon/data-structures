@@ -7,14 +7,9 @@ Author: Eduardo Ferreira
 License: MIT (see LICENSE for details)
 """
 
-# Module import
-# --------------------------------------------------------------------------------------------------
 from nexus.queue.queue import Queue
 import unittest
 
-
-# Test class
-# --------------------------------------------------------------------------------------------------
 class QueueTests(unittest.TestCase):
 
     def setUp(self):
@@ -47,8 +42,5 @@ class QueueTests(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(self.queue.empty(), True)
 
-
-# Methods :: Execution and boilerplate
-# --------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
     unittest.main()

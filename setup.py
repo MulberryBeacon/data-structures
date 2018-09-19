@@ -7,12 +7,8 @@ Author: Eduardo Ferreira
 License: MIT (see LICENSE for details)
 """
 
-# Module import
-# --------------------------------------------------------------------------------------------------
 from setuptools import setup, find_packages
 
-# Setup
-# --------------------------------------------------------------------------------------------------
 setup(
     name='data-structures',
     version='0.0.1',

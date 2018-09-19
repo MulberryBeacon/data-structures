@@ -7,14 +7,9 @@ Author: Eduardo Ferreira
 License: MIT (see LICENSE for details)
 """
 
-# Module import
-# --------------------------------------------------------------------------------------------------
-from nexus.stack.stack import Stack
+from .stack import Stack
 import unittest
 
-
-# Test class
-# --------------------------------------------------------------------------------------------------
 class StackTests(unittest.TestCase):
 
     def setUp(self):
@@ -53,8 +48,5 @@ class StackTests(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(self.stack.empty(), True)
 
-
-# Methods :: Execution and boilerplate
-# --------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
     unittest.main()
