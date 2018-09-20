@@ -1,27 +1,35 @@
 # -*- coding: utf8 -*-
 
 """
-Tests for the tree implementation.
+Tests for the binary search tree implementation.
 
 Author: Eduardo Ferreira
 License: MIT (see LICENSE for details)
 """
 
-# Module import
-# --------------------------------------------------------------------------------------------------
-from nexus.tree.tree import Tree
+from nexus.tree.tree import Node
 import unittest
 
-
-# Test class
-# --------------------------------------------------------------------------------------------------
 class TreeTests(unittest.TestCase):
 
     def setUp(self):
-        self.tree = Tree()
+        self.tree = Node(5)
+        self.tree.insert(1)
+        self.tree.insert(2)
+        self.tree.insert(8)
+        self.tree.insert(6)
+        self.tree.insert(10)
 
+    def test_insert(self):
+        size = self.tree.length()
+        self.tree.insert(7)
+        self.assertEqual(self.tree.length(), size + 1)
 
-# Methods :: Execution and boilerplate
-# --------------------------------------------------------------------------------------------------
+    def test_contains_true(self):
+        self.assertTrue(self.tree.contains(6))
+
+    def test_contains_false(self):
+        self.assertFalse(self.tree.contains(11))
+
 if __name__ == '__main__':
     unittest.main()

@@ -33,50 +33,50 @@ class LinkedList():
         self.head = None
 
 
-    def append(self, element):
+    def append(self, data):
         if self.head == None:
-            self.head = Node(element)
+            self.head = Node(data)
             return
 
         current = self.head
         while current.next != None:
             current = current.next
 
-        current.next = Node(element)
+        current.next = Node(data)
 
 
-    def prepend(self, element):
-        newHead = Node(element)
+    def prepend(self, data):
+        newHead = Node(data)
         newHead.next = self.head
         self.head = newHead
 
 
-    def get_with_value(self, element):
+    def get_with_value(self, data):
         if self.head == None:
             return None
 
-        if self.head.data == element:
+        if self.head.data == data:
             return self.head.data
 
         current = self.head
         while current.next != None:
-            if current.next.data == element:
+            if current.next.data == data:
                 return current.next.data
 
             current = current.next
 
 
-    def delete_with_value(self, element):
+    def delete_with_value(self, data):
         if self.head == None:
             return None
 
-        if self.head.data == element:
+        if self.head.data == data:
             self.head = self.head.next
             return None
 
         current = self.head
         while current.next != None:
-            if current.next.data == element:
+            if current.next.data == data:
                 current.next = current.next.next
                 return None
 
